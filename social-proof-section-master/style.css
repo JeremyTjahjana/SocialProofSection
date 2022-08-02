@@ -1,0 +1,181 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  /* Primary */
+  --VeryDarkMagenta: hsl(300, 43%, 22%);
+  --SoftPink: hsl(333, 80%, 67%);
+  /* Neutral */
+  --DarkGrayishMagenta: hsl(303, 10%, 53%);
+  --LightGrayMagenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  min-height: 100vh;
+  color: var(--VeryDarkMagenta);
+  font-family: "League Spartan";
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1.5rem;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  width: min(80%, 510px);
+  margin-bottom: 2.5rem;
+}
+
+h1 {
+  font-size: 40px;
+}
+h2 {
+  color: var(--DarkGrayishMagenta);
+  line-height: 1.25rem;
+  margin-top: 1rem;
+  font-weight: 400;
+  font-size: 18px;
+}
+.star-cards {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.star-card {
+  align-self: center;
+  width: min(80%, 500px);
+  margin: 0.5rem;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 1rem 3rem;
+  background-color: var(--LightGrayMagenta);
+}
+.star-card img {
+  width: 15px;
+  margin: 0 0.25rem 0.5rem;
+}
+
+.review-cards {
+  display: flex;
+  flex-direction: column;
+}
+.review-card img {
+  border-radius: 50%;
+  width: 40px;
+  margin-right: 1.5rem;
+}
+
+.review-card {
+  align-self: center;
+  width: min(80%, 500px);
+  border-radius: 5px;
+  text-align: left;
+  margin-block: 1rem;
+  padding: 2.25rem 2rem;
+  color: var(--White);
+  background-color: var(--VeryDarkMagenta);
+}
+.profile {
+  align-items: center;
+  justify-content: left;
+  display: flex;
+  flex-direction: row;
+  margin-block: 1rem;
+}
+h4 {
+  font-weight: 500;
+  margin-bottom: 0.275rem;
+}
+span {
+  font-size: 15px;
+  color: var(--SoftPink);
+}
+p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5rem;
+}
+.attribution {
+  margin: 2rem;
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    justify-content: center;
+    padding: 1rem 12.5vw;
+  }
+  h1 {
+    font-size: 48px;
+  }
+  header {
+    margin-right: 4vw;
+    text-align: left;
+  }
+  main {
+    margin-bottom: 5rem;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+  }
+  .review-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .star-card {
+    width: 540px;
+    display: flex;
+    flex: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .star-card .stars {
+    margin: 0;
+    padding: 0;
+    display: inline;
+  }
+  .stars img {
+    margin: 0 0.25rem;
+  }
+  h3 {
+    display: inline;
+    margin-left: 1rem;
+  }
+  .review-card {
+    margin-right: 1.5rem;
+  }
+  .attribution {
+    position: absolute;
+    bottom: 0;
+  }
+  .star-card:first-child {
+    position: relative;
+    left: -50px;
+  }
+  .star-card:last-child {
+    position: relative;
+    left: 50px;
+  }
+  .review-card:first-child {
+    position: relative;
+    top: -20px;
+  }
+  .review-card:last-child {
+    position: relative;
+    top: 20px;
+  }
+}
